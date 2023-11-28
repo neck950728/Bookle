@@ -54,8 +54,14 @@
 ## :clap: <a id="project-introduction">프로젝트 소개</a>
 
 <br>
-<img src="" width="35%">
+<img src="https://github.com/neck950728/Bookle/assets/151998896/84e9300c-133a-4eb8-9a25-a49d148f28ae" width="25%">
 <br><br>
+
+:thinking: 대여점의 대여 및 예약 시스템을 도서관에도 적용할 순 없을까?<br>
+
+저희는 대여점의 대여 및 예약 시스템을 도서관 분야에도 적용하여 <br>
+독자들에게 더욱 편리하고 효율적인 서비스를 제공하고자<br>
+:blue_book: ```'Bookle'``` 프로젝트를 진행하게 되었습니다!
 
 <br><br>
 
@@ -94,27 +100,19 @@
 <br><br>
 
 ## :tv: <a id="screen-configuration">화면 구성</a>
-<div align="left">
+<div align="center">
    
    |메인|
    |---|
    |<img src="https://github.com/neck950728/Bookle/assets/151998896/9da4ee8d-49bf-4cb9-a422-0195d23939ea" width="450">|
    
-</div>
-
-<br>
-
-<div align="center">
+   <br><br>
    
    |도서|
    |---|
    |<img src="https://github.com/neck950728/Bookle/assets/151998896/ca3d0dde-3fb4-4522-b787-3859e1b92508" width="450">|
    
-</div>
-
-<br>
-
-<div align="right">
+   <br><br>
    
    |관리자|
    |---|
