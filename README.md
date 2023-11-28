@@ -86,7 +86,7 @@
 
 ## :muscle: <a id="team-role">팀원 역할</a>
 ><p><strong>팀장</strong> : 김민진 :raising_hand_man:</p>
-> - 도서 파트 담당 : 검색, 리스트, 상세, 예약
+> - 도서 파트 담당 : 검색, 목록, 상세, 예약
 
 ><p><strong>팀원</strong> : 유수빈</p>
 > - 관리자 파트 담당 : 대여/반납/예약/도서/회원 관리
