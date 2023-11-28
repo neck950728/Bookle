@@ -86,27 +86,35 @@
 > - 관리자 파트 담당 : 대여/반납/예약/도서/회원 관리
 
 ><p><strong>팀원</strong> : 서재석</p>
-> - 회원 파트 담당 : 회원가입, 마이페이지, 아이디/비밀번호 찾기
+> - 회원 파트 담당 : 로그인 & 회원가입, 마이페이지
 
 ><p><strong>팀원</strong> : 정윤직</p>
-> - 서버 파트 담당 : 
+> - 서버 파트 담당 : 클라이언트 측으로부터 수신한 명령 처리
 
 <br><br>
 
 ## :tv: <a id="screen-configuration">화면 구성</a>
-<div align="center">
+<div align="left">
    
    |메인|
    |---|
    |<img src="https://github.com/neck950728/Bookle/assets/151998896/9da4ee8d-49bf-4cb9-a422-0195d23939ea" width="450">|
    
-   <br><br>
+</div>
+
+<br>
+
+<div align="center">
    
    |도서|
    |---|
    |<img src="https://github.com/neck950728/Bookle/assets/151998896/ca3d0dde-3fb4-4522-b787-3859e1b92508" width="450">|
    
-   <br><br>
+</div>
+
+<br>
+
+<div align="right">
    
    |관리자|
    |---|
