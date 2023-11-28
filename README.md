@@ -13,7 +13,7 @@
 ><p><strong>분류</strong> - 팀 프로젝트</p>
 ><p><strong>제목</strong> - Bookle</p>
 ><p><strong>주제</strong> - 도서 대여 프로그램</p>
-><p><strong>기획 및 제작</strong> - 김민진(나), 유수빈, 서재석, 정윤직, 윤병규</p>
+><p><strong>기획 및 제작</strong> - 김민진(나), 유수빈, 서재석, 정윤직</p>
 ><p><strong>제작 기간</strong> - 2018.01 ~ 2018.02</p>
 
 <br><br>
@@ -80,19 +80,16 @@
 
 ## :muscle: <a id="team-role">팀원 역할</a>
 ><p><strong>팀장</strong> : 김민진 :raising_hand_man:</p>
-> - 
+> - 도서 파트 담당 : 검색, 리스트, 상세, 예약
 
 ><p><strong>팀원</strong> : 유수빈</p>
-> - 
+> - 관리자 파트 담당 : 대여/반납/예약/도서/회원 관리
 
 ><p><strong>팀원</strong> : 서재석</p>
-> - 
+> - 회원 파트 담당 : 회원가입, 마이페이지, 아이디/비밀번호 찾기
 
 ><p><strong>팀원</strong> : 정윤직</p>
-> - 
-
-><p><strong>팀원</strong> : 윤병규</p>
-> - 
+> - 서버 파트 담당 : 
 
 <br><br>
 
