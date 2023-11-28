@@ -97,18 +97,6 @@
 <br><br>
 
 ## :tv: <a id="screen-configuration">화면 구성</a>
-|메인|
-|---|
-|<img src="https://github.com/neck950728/Bookle/assets/151998896/9da4ee8d-49bf-4cb9-a422-0195d23939ea">|
-
-<br>
-
-|도서|
-|---|
-|<img src="https://github.com/neck950728/Bookle/assets/151998896/ca3d0dde-3fb4-4522-b787-3859e1b92508">|
-
-<br>
-
-|관리자|
-|---|
-|<img src="https://github.com/neck950728/Bookle/assets/151998896/22e29ad5-279e-4799-a200-b509f38e5228">|
+|메인|도서|관리자|
+|---|---|---|
+|<img src="https://github.com/neck950728/Bookle/assets/151998896/9da4ee8d-49bf-4cb9-a422-0195d23939ea">|<img src="https://github.com/neck950728/Bookle/assets/151998896/ca3d0dde-3fb4-4522-b787-3859e1b92508">|<img src="https://github.com/neck950728/Bookle/assets/151998896/22e29ad5-279e-4799-a200-b509f38e5228">|
