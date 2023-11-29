@@ -110,7 +110,7 @@
    
    |도서|
    |---|
-   |<img src="https://github.com/neck950728/Bookle/assets/151998896/ca3d0dde-3fb4-4522-b787-3859e1b92508" width="450">|
+   |<img src="https://github.com/neck950728/Bookle/assets/151998896/3a743485-0908-48c2-8692-98b0fc7a37c7" width="450">|
    
    <br>
    
