@@ -4,6 +4,7 @@
 
 <div align="center">
    <img src="https://github.com/neck950728/Bookle/assets/151998896/93413371-d4f4-4f9c-a598-c9132a77b349" width="25%">
+   <h6><i>본 소프트웨어는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.</i></h6>
 </div>
 
 ---
