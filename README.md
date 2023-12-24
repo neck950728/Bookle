@@ -53,12 +53,11 @@
 <br><br>
 
 ## :clap: <a id="project-introduction">프로젝트 소개</a>
-
 <br>
 <img src="https://github.com/neck950728/Bookle/assets/151998896/84e9300c-133a-4eb8-9a25-a49d148f28ae" width="25%">
 <br><br>
 
-:thinking: 대여점의 대여 및 예약 시스템을 도서관에도 적용할 순 없을까?<br>
+:thinking: 대여점의 대여 및 예약 시스템을 도서관에도 적용할 순 없을까?
 
 저희는 대여점의 대여 및 예약 시스템을 도서관에도 적용하여<br>
 독자들에게 더욱 편리하고 효율적인 서비스를 제공하고자<br>
