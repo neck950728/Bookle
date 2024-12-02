@@ -8,26 +8,26 @@ import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 public class SendAuthNum {
-	private final String api_key = "NCS1YR5S5JOOAQAF";
-	private final String api_secret = "I0CHQXOWPZMAQUIQO80AXPFRXNG8W5IN";
+	private final String api_key = "{API Key}";
+	private final String api_secret = "{API Secret}";
 	private Message coolSms = new Message(api_key, api_secret);
 	
-	// È¸¿ø°¡ÀÔ¿¡ »ç¿ëµÊ
+	// íšŒì›ê°€ì…ì— ì‚¬ìš©ë¨
 	public int send(String recipient_phoneNum) {
 		int authNum = (int)(Math.random() * (999999 - 100000 + 1)) + 100000;
-		String msg = "Bookle ¼­ºñ½º¸¦ ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù :)\nÀÎÁõ¹øÈ£´Â [" + authNum + "]ÀÔ´Ï´Ù.";
+		String msg = "Bookle ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤ :)\nì¸ì¦ë²ˆí˜¸ëŠ” [" + authNum + "]ì…ë‹ˆë‹¤.";
 		
 		HashMap<String, String> params = new HashMap<String, String>();
 	    params.put("to", recipient_phoneNum);
-	    params.put("from", "01057796682");
+	    params.put("from", "{ë°œì‹ ì ë²ˆí˜¸}");
 	    params.put("type", "SMS");
 	    params.put("text", msg);
 	    // params.put("app_version", "test app 1.2"); // application name and version
 
 	    try {
-	      JSONObject obj = (JSONObject)coolSms.send(params); // ÀÎÁõ¹øÈ£ Àü¼Û
+	      JSONObject obj = (JSONObject)coolSms.send(params); // ì¸ì¦ë²ˆí˜¸ ì „ì†¡
 	      System.out.println(obj.toString());
-	    }catch(CoolsmsException e) { // ÀÎÁõ¹øÈ£ Àü¼Û ½ÇÆĞ
+	    }catch(CoolsmsException e) { // ì¸ì¦ë²ˆí˜¸ ì „ì†¡ ì‹¤íŒ¨
 	      System.out.println(e.getMessage());
 	      System.out.println(e.getCode());
 	    }
@@ -36,22 +36,22 @@ public class SendAuthNum {
 	}
 	
 	
-	// ºñ¹Ğ¹øÈ£ Ã£±â¿¡ »ç¿ëµÊ
+	// ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°ì— ì‚¬ìš©ë¨
 	public int send(String userName, String phoneNum) {
 		int authNum = (int)(Math.random() * (999999 - 100000 + 1)) + 100000;
-		String msg = userName + "´Ô! Bookle ¼­ºñ½º¸¦ ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù :)\nÀÎÁõ¹øÈ£´Â [" + authNum + "] ÀÔ´Ï´Ù.";
+		String msg = userName + "ë‹˜! Bookle ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤ :)\nì¸ì¦ë²ˆí˜¸ëŠ” [" + authNum + "] ì…ë‹ˆë‹¤.";
 		
 		HashMap<String, String> params = new HashMap<String, String>();
 	    params.put("to", phoneNum);
-	    params.put("from", "01057796682");
+	    params.put("from", "{ë°œì‹ ì ë²ˆí˜¸}");
 	    params.put("type", "SMS");
 	    params.put("text", msg);
 	    // params.put("app_version", "test app 1.2"); // application name and version
 
 	    try {
-	      JSONObject obj = (JSONObject)coolSms.send(params); // ÀÎÁõ¹øÈ£ Àü¼Û
+	      JSONObject obj = (JSONObject)coolSms.send(params); // ì¸ì¦ë²ˆí˜¸ ì „ì†¡
 	      System.out.println(obj.toString());
-	    }catch (CoolsmsException e) { // ÀÎÁõ¹øÈ£ Àü¼Û ½ÇÆĞ
+	    }catch (CoolsmsException e) { // ì¸ì¦ë²ˆí˜¸ ì „ì†¡ ì‹¤íŒ¨
 	      System.out.println(e.getMessage());
 	      System.out.println(e.getCode());
 	    }
