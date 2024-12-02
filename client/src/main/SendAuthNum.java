@@ -8,8 +8,8 @@ import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 public class SendAuthNum {
-	private final String api_key = "{API Key}";
-	private final String api_secret = "{API Secret}";
+	private final String api_key = "API Key 입력";
+	private final String api_secret = "API Secret 입력";
 	private Message coolSms = new Message(api_key, api_secret);
 	
 	// 회원가입에 사용됨
@@ -19,7 +19,7 @@ public class SendAuthNum {
 		
 		HashMap<String, String> params = new HashMap<String, String>();
 	    params.put("to", recipient_phoneNum);
-	    params.put("from", "{발신자 번호}");
+	    params.put("from", "발신자 번호 입력");
 	    params.put("type", "SMS");
 	    params.put("text", msg);
 	    // params.put("app_version", "test app 1.2"); // application name and version
@@ -43,7 +43,7 @@ public class SendAuthNum {
 		
 		HashMap<String, String> params = new HashMap<String, String>();
 	    params.put("to", phoneNum);
-	    params.put("from", "{발신자 번호}");
+	    params.put("from", "발신자 번호 입력");
 	    params.put("type", "SMS");
 	    params.put("text", msg);
 	    // params.put("app_version", "test app 1.2"); // application name and version
