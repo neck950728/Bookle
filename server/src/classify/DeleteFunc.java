@@ -19,14 +19,13 @@ public class DeleteFunc {
 	}
 
 	public void reservationCancel() {
-		// member_id, book_id
 		try {
 			bookleDB = new BookleDB();
 			String member_id = dis.readUTF();
 			String book_id = dis.readUTF();
 			String date = dis.readUTF();
 
-			int result = bookleDB.deleteReservation_Standby(1, date, member_id, book_id);
+			int result = bookleDB.deleteReservation_Standby(1, date, book_id, member_id);
 			if (result > 0) {
 				dos.writeInt(0);
 			} else {
@@ -46,7 +45,7 @@ public class DeleteFunc {
 			String book_id = dis.readUTF();
 			String order_number = dis.readUTF();
 
-			int result = bookleDB.deleteReservation_Standby(2, order_number, member_id, book_id);
+			int result = bookleDB.deleteReservation_Standby(2, order_number, book_id, member_id);
 			if (result > 0) {
 				dos.writeInt(0);
 			} else {

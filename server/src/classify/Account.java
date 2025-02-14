@@ -46,13 +46,13 @@ public class Account {
 		if(type == 1) {
 			// 사용자 예약현황
 			System.out.println("---예약현황 보기---");
-			sql = "select b.id, b.title, b.writer, b.publisher, r.reserved_date from book b, reservation r where r.member_id='" + user_id + "' and b.id=r.book_id";
+			sql = "select b.id, b.title, b.writer, b.publisher, r.reserved_date from book b, reservation r where b.id=r.book_id and r.member_id='" + user_id + "'";
 			result = bookleDB.select_info(sql);
 			
 		} else if (type == 2) {
 			// 사용자 대여현황
 			System.out.println("---대여현황 보기---");
-			sql = "select b.id, b.title, b.writer, b.publisher, i.io_date from book b, inventory_management i where i.member_id='" + user_id + "' and b.id=i.book_id";
+			sql = "select b.id, b.title, b.writer, b.publisher, i.io_date from book b, inventory_management i where b.id=i.book_id and i.member_id='" + user_id + "'";
 			result = bookleDB.select_info(sql);
 		}
 		
@@ -183,7 +183,7 @@ public class Account {
 			//-------------------------------------------------------------------------
 //			// 사용자 대여현황
 //			sql = null;
-//			sql = "select b.title, i.io_date from book b, inventory_management i where i.member_id='"+ id_ +"' and b.id=i.book_id";
+//			sql = "select b.title, i.io_date from book b, inventory_management i where b.id=i.book_id and i.member_id='"+ id_ +"'";
 //			ArrayList<String> inventory_info = new ArrayList<>();
 //			inventory_info = bookleDB.selectJoinTitleDate(sql);
 //			
@@ -197,7 +197,7 @@ public class Account {
 			
 //			// 사용자 예약현황
 //			sql = null;
-//			sql = "select title from book b, reservation_management r where r.member_id='"+ user_id +"' and b.id=r.book_id";
+//			sql = "select title from book b, reservation_management r where b.id=r.book_id and r.member_id='"+ user_id +"'";
 //			ArrayList<String> reservation_info = new ArrayList<>();
 //			reservation_info = bookleDB.selectJoinTitle(sql);
 //			

@@ -72,7 +72,7 @@ public class InsertAdmin {
 					System.out.println("재고가 0입니다. 대기자 번호를 뽑습니다.");
 					int total = bookleDB.getBook(book_id).getTotal_quantity();
 					int result[] = new int[2];
-					result = bookleDB.insertStandby(book_id, member_id, total);
+					result = bookleDB.insertStandby(total, book_id, member_id);
 					if (result[0] > 0) {
 						System.out.println("일단 성공");
 						dos.writeInt(0);

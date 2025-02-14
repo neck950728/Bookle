@@ -40,7 +40,7 @@ public class UpdateAdmin {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		//bookleDB.closeConnection();
+		// bookleDB.closeConnection();
 	}
 
 	public void reservation_update() {
@@ -64,7 +64,7 @@ public class UpdateAdmin {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		//bookleDB.closeConnection();
+		// bookleDB.closeConnection();
 	}
 
 	public void exe_command() {

@@ -29,9 +29,9 @@ public class BookleDB {
 		System.out.println("type : " + type);
 		String sql = "";
 		if (type.equals("inventory_management")) {
-			sql = "select count(*) from inventory_management where member_id= ?";
+			sql = "select count(*) from inventory_management where member_id = ?";
 		} else if (type.equals("standby")) {
-			sql = "select count(*) from standby where member_id= ?";
+			sql = "select count(*) from standby where member_id = ?";
 		}
 		PreparedStatement ps;
 		ps = con.prepareStatement(sql);
@@ -49,7 +49,7 @@ public class BookleDB {
 		return result;
 	}
 
-	public int deleteReservation_Standby(int type, String classify, String member_id, String book_id) throws Exception {
+	public int deleteReservation_Standby(int type, String classify, String book_id, String member_id) throws Exception {
 		con = DBcon.getConnection();
 
 		// classify : date, order_number
@@ -81,12 +81,12 @@ public class BookleDB {
 				con.close();
 			}
 		} else if (type == 2) {
-			String sql = "delete from standby where member_id = ? and book_id = ? and order_number = ?";
+			String sql = "delete from standby where order_number = ? and book_id = ? and member_id = ?";
 			PreparedStatement ps;
 			ps = con.prepareStatement(sql);
-			ps.setString(1, member_id);
+			ps.setInt(1, Integer.parseInt(classify));
 			ps.setString(2, book_id);
-			ps.setInt(3, Integer.parseInt(classify));
+			ps.setString(3, member_id);
 			result = ps.executeUpdate();
 			con.commit();
 			updateStandbyPriority(book_id);
@@ -98,7 +98,7 @@ public class BookleDB {
 
 	}
 
-	public int[] insertStandby(String book_id, String member_id, int total) throws Exception {
+	public int[] insertStandby(int total, String book_id, String member_id) throws Exception {
 		con = DBcon.getConnection();
 
 		// 해당 책의 대기번호 가져오기
@@ -117,9 +117,9 @@ public class BookleDB {
 		if (order_number < total) { // 대기자 수가 전체 책의 수량보다 작아야 수행
 			sql = "insert into standby values(?, ?, ?)";
 			ps = con.prepareStatement(sql);
-			ps.setString(1, member_id);
+			ps.setInt(1, ++order_number);
 			ps.setString(2, book_id);
-			ps.setInt(3, ++order_number);
+			ps.setString(3, member_id);
 
 			result[0] = ps.executeUpdate();
 			result[1] = order_number;
@@ -142,9 +142,9 @@ public class BookleDB {
 
 		ArrayList<Standby> list = new ArrayList<>();
 		while (rs.next()) {
-			String book_id = rs.getString("book_id");
 			int order_number = rs.getInt("order_number");
-			Standby standby = new Standby(member_id, book_id, order_number);
+			String book_id = rs.getString("book_id");
+			Standby standby = new Standby(order_number, book_id, member_id);
 			list.add(standby);
 		}
 		rs.close();
@@ -164,9 +164,9 @@ public class BookleDB {
 
 		ArrayList<Standby> list = new ArrayList<>();
 		while (rs.next()) {
-			String member_id = rs.getString("member_id");
 			int order_number = rs.getInt("order_number");
-			Standby standby = new Standby(member_id, book_id, order_number);
+			String member_id = rs.getString("member_id");
+			Standby standby = new Standby(order_number, book_id, member_id);
 			list.add(standby);
 		}
 		rs.close();
@@ -179,7 +179,7 @@ public class BookleDB {
 	public int deleteStandbyFirstMember(String book_id, String first_member_id) throws Exception {
 		con = DBcon.getConnection();
 
-		String sql = "delete from standby where book_id = ? and member_id = ? and order_number = 1";
+		String sql = "delete from standby where order_number = 1 and book_id = ? and member_id = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, book_id);
 		ps.setString(2, first_member_id);
@@ -195,7 +195,7 @@ public class BookleDB {
 	public int updateStandbyPriority(String book_id) throws Exception {
 		con = DBcon.getConnection();
 
-		String sql = "update standby set order_number = order_number - 1 where book_id = ? and order_number > 1";
+		String sql = "update standby set order_number = order_number - 1 where order_number > 1 and book_id = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, book_id);
 		int result = ps.executeUpdate();
